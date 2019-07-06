@@ -3,6 +3,8 @@
 Could not open a connection to your authentication agent.
 Fix: setting up SSH_AUTH_SOCK environment variable.
 
+
+	ssh-agent bash # initialize agent
 	SSH_AUTH_SOCK=/tmp/ssh-agVZL13989/agent.13989;
 	export SSH_AUTH_SOCK;
 	SSH_AGENT_PID=13990; export SSH_AGENT_PID;
