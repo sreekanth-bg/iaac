@@ -1,4 +1,5 @@
 cd ~
+sudo apt install unzip
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # add the docker stable repository
 sudo add-apt-repository \
@@ -31,4 +32,4 @@ wget https://releases.hashicorp.com/terraform/0.12.3/terraform_0.12.3_linux_amd6
 unzip terraform_0.12.3_linux_amd64.zip -d ~
 rm terraform_0.12.3_linux_amd64.zip
 # Make the terraform binary executable.
-sudo chmod +x ./terraform
+sudo chmod +x ~/./terraform
