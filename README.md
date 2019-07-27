@@ -15,7 +15,7 @@ Fix: setting up SSH_AUTH_SOCK environment variable.
 
 gcloud compute instance
 
-	--service-account=622916818422-compute@developer.gserviceaccount.com \\ attach service account as an identity to the instance
+	--service-account=1234567890-compute@developer.gserviceaccount.com \\ attach service account as an identity to the instance
 	--scopes=https://www.googleapis.com/auth/cloud-platform              \\ cloud-platform scope to the instance
 
 ------------------------
