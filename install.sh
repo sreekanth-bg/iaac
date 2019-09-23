@@ -1,6 +1,8 @@
 cd ~
 sudo apt install unzip
+echo "#######################################################"
 echo "################### Install Docker ####################"
+echo "#######################################################"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # add the docker stable repository
 sudo add-apt-repository \
@@ -20,6 +22,14 @@ echo $COMPOSE_VERSION
 curl -L "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 docker-compose -v
+echo "########################################################"
+echo "### Install docker machine #############################"
+echo "########################################################"
+base=https://github.com/docker/machine/releases/download/v0.16.0 &&
+  curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+  sudo mv /tmp/docker-machine /usr/local/bin/docker-machine &&
+  chmod +x /usr/local/bin/docker-machine
+docker-machine version
 echo "########################################################"
 echo "### Install kubectl#####################################"
 echo "########################################################"
