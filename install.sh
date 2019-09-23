@@ -1,5 +1,6 @@
 cd ~
 sudo apt install unzip
+echo "################### Install Docker ####################"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # add the docker stable repository
 sudo add-apt-repository \
@@ -8,6 +9,9 @@ sudo add-apt-repository \
     stable"
 apt-get update -y
 apt-get install -y docker-ce
+echo "################### Add user to docker group ###########"
+sudo usermod -aG docker $USER
+newgrp docker
 echo "########################################################"
 echo "### Install Docker Compose #############################"
 echo "########################################################"
