@@ -14,6 +14,10 @@ apt-get install -y docker-ce
 echo "################### Add user to docker group ###########"
 sudo usermod -aG docker $USER
 newgrp docker
+echo "################### Change docker Ownership ###########"
+sudo chown $USER:docker /home/ubuntu/.docker
+sudo chown $USER:docker /home/ubuntu/.docker/config.json
+sudo chmod g+rw /home/ubuntu/.docker/config.json
 echo "########################################################"
 echo "### Install Docker Compose #############################"
 echo "########################################################"
