@@ -34,9 +34,9 @@ echo "########################################################"
 echo "### Install kubectl#####################################"
 echo "########################################################"
 # Download the latest release:
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+sudo curl --silent --location -o /usr/local/bin/kubectl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 # Make the kubectl binary executable.
-chmod +x ./kubectl
+sudo chmod +x /usr/local/bin/kubectl
 kubectl version
 echo "########################################################"
 echo "### Install Terraform ##################################"
