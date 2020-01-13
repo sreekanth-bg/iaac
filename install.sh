@@ -51,3 +51,13 @@ unzip terraform_0.12.3_linux_amd64.zip -d ~
 rm terraform_0.12.3_linux_amd64.zip
 # Make the terraform binary executable.
 sudo chmod +x ~/./terraform
+echo "########################################################"
+echo "### Install aws-cli   ##################################"
+echo "########################################################"
+sudo apt install python3-pip
+pip3 install --upgrade --user awscli
+echo 'export PATH=/home/ubuntu/.local/bin:$PATH' >> ~/.bashrc 
+#enable auto complete of aws-cli commands
+echo 'complete -C '/home/ubuntu/.local/bin/aws_completer' aws' >> ~/.bashrc 
+#Install jq, envsubst (from GNU gettext utilities) and bash-completion
+sudo apt-get install -y jq gettext bash-completion
